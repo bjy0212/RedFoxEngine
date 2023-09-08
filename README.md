@@ -2,5 +2,5 @@
 
 `canvas` api based low quality game engine
 
-## cdn
+## CDN
 https://cdn.jsdelivr.net/gh/bjy0212/RedFoxEngine/redfox.js
