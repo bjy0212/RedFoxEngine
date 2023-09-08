@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'notosans';
+    src: url(../resources/fonts//NotoSansCJKkr-Bold.otf) format('opentype');
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-drag: none;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: 'notosans' -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+.selectable {
+    user-select: text;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    font-family: 'notosans' -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+    font-size: 1em;
+    /* Padding to avoid the "unsafe" areas behind notches in the screen */
+    height: 100vh;
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+    width: 100%;
+    background: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page {
+    position: absolute;
+    left: center;
+    top: center;
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(66, 66, 66);
+}
+
+.ui {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    font-size: 1em;
+}
+
+.ui > * {
+    position: absolute;
+    font-family: 'notosans' -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+}
