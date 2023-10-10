@@ -1,6 +1,13 @@
+if (!GPU) {
+    console.error("must include gpu.js in the project");
+}
+
 //#region canvas methods
-const canvas = document.querySelector("canvas"),
-    ctx = canvas.getContext("2d");
+const canvas = new HTMLCanvasElement(),
+    ctx = canvas.getContext("2d"),
+    viewcanvas = document.querySelector("canvas"),
+    viewctx = viewcanvas.getContext("2d");
+    gpu = new GPU();
 
 //disable anti-aliasing
 ctx.imageSmoothingEnabled = false;
@@ -60,6 +67,8 @@ function Resize(wr = 16, hr = 9) {
 function ChangeResolution(w, h) {
     canvas.width = w;
     canvas.height = h;
+    viewcanvas.width = w;
+    viewcanvas.height = h;
 
     width = w;
     height = h;
@@ -130,6 +139,11 @@ window.onkeyup = (e) => {
 
 function Clear() {
     ctx.clearRect(0, 0, width, height);
+}
+
+function SyncCanvas() {
+    viewctx.clearRect(0, 0, width, height);
+    viewctx.drawImage(ctx.getImageData(0, 0, width, height), 0, 0);
 }
 
 function RotateAndRun(x, y, flip, flop, degrees, func) {
