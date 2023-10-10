@@ -569,12 +569,13 @@ class Scene {
             }
         });
 
-        list = Object.keys(this.objects).filter((e) => this.objects[e].collider);
-        for (let i = 0; i < this.__collid_list.length; i++) {
-            for (let j = i + 1; j < this.__collid_list.length; j++) {
-                Collider.Collid(this.objects[this.__collid_list[i]], this.objects[this.__collid_list[j]]);
-            }
-        }
+        // collision detection code must be imporved...
+        // list = Object.keys(this.objects).filter((e) => this.objects[e].collider);
+        // for (let i = 0; i < this.__collid_list.length; i++) {
+        //     for (let j = i + 1; j < this.__collid_list.length; j++) {
+        //         Collider.Collid(this.objects[this.__collid_list[i]], this.objects[this.__collid_list[j]]);
+        //     }
+        // }
 
         this.camera.Update(dt);
 
