@@ -3,7 +3,7 @@
 `canvas` api based low quality game engine
 
 ## CDN
-https://raw.githubusercontent.com/bjy0212/RedFoxEngine/master/redfox.js
+https://cdn.jsdelivr.net/gh/bjy0212/RedFoxEngine/redfox.js
 
 ## Dependencies
-gpu.js - https://raw.githubusercontent.com/gpujs/gpu.js/master/dist/gpu-browser.min.js
+gpu.js - https://cdn.jsdelivr.net/gh/gpujs/gpu.js/dist/gpu-browser.min.js
