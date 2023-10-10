@@ -3,9 +3,9 @@ if (!GPU) {
 }
 
 //#region canvas methods
-const canvas = new HTMLCanvasElement(),
+const canvas = document.querySelector("canvas.hidden"),
     ctx = canvas.getContext("2d"),
-    viewcanvas = document.querySelector("canvas"),
+    viewcanvas = document.querySelector("canvas.main"),
     viewctx = viewcanvas.getContext("2d");
     gpu = new GPU();
 
@@ -143,7 +143,7 @@ function Clear() {
 
 function SyncCanvas() {
     viewctx.clearRect(0, 0, width, height);
-    viewctx.drawImage(ctx.getImageData(0, 0, width, height), 0, 0);
+    viewctx.putImageData(ctx.getImageData(0, 0, width, height), 0, 0);
 }
 
 function RotateAndRun(x, y, flip, flop, degrees, func) {
