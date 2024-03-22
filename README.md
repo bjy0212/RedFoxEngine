@@ -1,6 +1,6 @@
 # RedFoxEngine
 
-## this project is currently not on development. (archived)
+### this project is currently not on development. (archived)
 
 `canvas` api based low quality game engine
 
