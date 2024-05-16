@@ -1,4 +1,4 @@
-# RedFoxEngine
+# RedFoxEngine(deprecated)  
 
 `canvas` api based low quality game engine
 
